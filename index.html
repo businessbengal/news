@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Kolkata Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+    nav a:hover {
+      background: #555;
+      border-radius: 4px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .post-title {
+      color: #0077cc;
+      cursor: pointer;
+    }
+    .post-title:hover {
+      text-decoration: underline;
+    }
+    .back-btn {
+      color: #0077cc;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    #contact {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Local News Kolkata</h1>
+  </header>
+
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="#" onclick="goHome()">About</a>
+    <a href="#" onclick="showContact()">Contact</a>
+  </nav>
+
+  <div class="container">
+  <div>
+  <h3>A news page will highlight the vibrancy of Kolkata's business and commerce</h3>
+Kolkata - The commercial capital of eastern India, where new enterprises are being created every day, opening the doors of small to large businesses. The heart of the city is its diverse business and economic activities. And to make that business vibrancy easier and more real to the public, a new local news channel has come forward, which has a complete business-oriented information page in its plan.
+
+The main purpose of this news page is to provide details of various industries and business sectors of Kolkata - which will be an important database for everyone from ordinary people to new entrepreneurs, investors and market analysts. Success stories of small businesses, ideas of new start-ups, trade licenses, updated tax rules, benefits of government schemes, demand for products in the local market - everything will be on this page.<br>
+
+Of particular importance will be the characteristics of various area-based businesses in Kolkata. For example, the wholesale business in Burrabazar, electronic products in Rajabazar, the idol industry in Kumartuli, the leather industry in Tangra, the restaurant business in Park Street, or the IT enterprise in Salt Lake Sector 5 - all these areas will have in-depth reports and presentations.<br>
+
+This news page doesn't just stop at providing news. There will be a live update section for traders - where daily market rates, business license notices, or new government directives will be published simultaneously. There will be short video interview series - where successful entrepreneurs from Kolkata will share their experiences and suggestions.<br>
+
+For those who want to start a new business, there is a "Startup Corner" - where there will be guidance on the steps to start a business, how to register, what kind of financial help is available. There is also a special segment called "Young Entrepreneur of the Week" to encourage educated youth.<br>
+
+This initiative, on the one hand, will be a reliable platform for business information and on the other hand, it will be a powerful medium for projecting the overall economic picture of Kolkata. It is believed that it will earn the trust of the people through its presentation in the local language and straightforwardness.<br>
+
+Most importantly, Kolkata's businesses are not just about big corporates - everything from tea shops to small enterprises making paper bags on the roadside is part of the city's economy. This news page will also bring to light the many small yet important initiatives - bringing their voices to the larger community.<br>
+
+With this new initiative, the trajectory, changes and possibilities of Kolkata's economy should be clear to every reader.
+</div>
+    <div id="home">
+      <h2>Recent Posts</h2>
+      <ul>
+        <li><span class="post-title" onclick="showPost(1)">Post One Title</span></li>
+        <li><span class="post-title" onclick="showPost(2)">Post Two Title</span></li>
+      </ul>
+    </div>
+
+    <div id="post1" style="display:none">
+      <span class="back-btn" onclick="goHome()">&larr; Back to Home</span>
+      <h2>Post One Title</h2>
+      <p>This is the content of the first blog post. It can include paragraphs, images, or anything else you like.</p>
+    </div>
+
+    <div id="post2" style="display:none">
+      <span class="back-btn" onclick="goHome()">&larr; Back to Home</span>
+      <h2>Post Two Title</h2>
+      <p>This is the content of the second blog post. Add your insights, stories, or tutorials here.</p>
+    </div>
+
+    <div id="contact" style="display:none">
+      <h2>Contact</h2>
+      <p>You can reach us at <a href="mailto:contact@myblog.com">contact@myblog.com</a>.</p>
+      <p>Or follow us on social media!</p>
+    </div>
+  </div>
+
+  <script>
+    function showPost(postNumber) {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+      document.getElementById('post1').style.display = 'none';
+      document.getElementById('post2').style.display = 'none';
+      document.getElementById('post' + postNumber).style.display = 'block';
+    }
+
+    function goHome() {
+      document.getElementById('home').style.display = 'block';
+      document.getElementById('post1').style.display = 'none';
+      document.getElementById('post2').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+    }
+
+    function showContact() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('post1').style.display = 'none';
+      document.getElementById('post2').style.display = 'none';
+      document.getElementById('contact').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
